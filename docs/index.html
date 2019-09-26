@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width="device-width", initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-    body {background-color: black;}
-   h1 {color: blue;
-  font-family: verdana;
-  font-size: 300%;}
-
- p{ color: red;
-  font-family: courier;
-  font-size: 160%;}
-    </style>
 </head>
+
 <body>
-   <h1>Hej med dig</h1> 
-<p> hheeeaaawee
-ygfd aoijsdioa jasdijasd iajd
-    asdijoajsdi
-    huuuh
-</br>
-asadas  24321
-</p>
-<input type="text" id="hilsen" placeholder="Skriv en hilsen">
-<button>Klik her</button>
-</br>
-<iframe width="453" height="280" src="https://www.youtube.com/embed/3tCfHG2v_o4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</br>
-<iframe width="453" height="280" src="https://www.youtube.com/embed/UbFxxpfzCSA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p style="background-color:Tomato;">Lorem ipsum...</p>
+    <div id="root"></div>
+    <button id="knap" onclick="lavside()">Klik her</button>
+    <button id="knap" onclick="beregn()">Beregn CO2</button>
 </body>
+<script>
+    function beregn() {
+        let side = document.getElementById("root");
+    }
+    function lavside() {
+        let side = document.getElementById("root");
+
+        let tekstboks = document.createElement("input");
+        textboks.type = Number;
+        tekstboks.id = "sTog"
+        tekstboks.placeholder = "hvor mange km";
+
+        //sæt input feltet
+        //let hilsen = document.getElementById('hilsen').value;
+        //let overskrift = document.getElementById("Velkommen");
+        //overskrift.innerHTML = hilsen
+    }
+//opret et overskrifts elememnt
+let overskrift = document.createElement("h1");
+        //giv overskrift en inner html
+        overskrift.innerHTML = "Co2 beregner";
+        //insæt overskriften under root
+        side.appendChild(overskrift);
+        //sæt input feltet på siden
+        side.appendChild(textboks)
+</script>
+
+
 </html>
